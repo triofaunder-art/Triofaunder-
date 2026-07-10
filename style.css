@@ -243,3 +243,23 @@ max-width:100%;
 .stat p{
     font-size:18px;
 }
+/* Premium Services */
+
+.services{
+    padding:80px 20px;
+}
+
+.services h2{
+    margin-bottom:40px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    max-width:100%;
+    margin:0;
+}
