@@ -263,3 +263,16 @@ max-width:100%;
     max-width:100%;
     margin:0;
 }
+/* Services Grid */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.services .card{
+    max-width:100%;
+    margin:0;
+}
