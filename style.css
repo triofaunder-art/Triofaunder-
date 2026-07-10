@@ -359,3 +359,104 @@ max-width:100%;
     background:#0047b3;
     transform:scale(1.1);
 }
+/* =========================
+   PREMIUM DARK MODE
+========================= */
+
+body{
+    background:#0f172a;
+    color:#f8fafc;
+}
+
+header{
+    background:linear-gradient(135deg,#111827,#1e3a8a);
+}
+
+nav{
+    background:#020617;
+    box-shadow:0 2px 15px rgba(0,0,0,.4);
+}
+
+.card,
+.feature,
+.testimonial,
+.contact{
+    background:#1e293b;
+    color:#fff;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.services,
+.why-us,
+.testimonials,
+#about{
+    background:#0f172a;
+}
+
+.contact-form input,
+.contact-form textarea{
+    background:#1e293b;
+    color:#fff;
+    border:1px solid #334155;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+    color:#94a3b8;
+}
+
+footer{
+    background:#020617;
+}
+
+.btn{
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+}
+
+.btn:hover{
+    box-shadow:0 0 20px rgba(59,130,246,.6);
+}
+
+/* Glow Effect */
+
+.card:hover,
+.feature:hover,
+.testimonial:hover{
+    box-shadow:0 0 25px rgba(59,130,246,.35);
+}
+
+/* =========================
+   LOADING SCREEN
+========================= */
+
+.loader{
+    position:fixed;
+    inset:0;
+    background:#020617;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    transition:.8s;
+}
+
+.loader::after{
+    content:"";
+    width:70px;
+    height:70px;
+    border:6px solid #334155;
+    border-top:6px solid #3b82f6;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+.loader.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
+}
