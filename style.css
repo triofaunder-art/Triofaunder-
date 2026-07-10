@@ -105,3 +105,93 @@ footer{
     text-align:center;
     padding:20px;
 }
+/* Premium Effects */
+
+html{
+scroll-behavior:smooth;
+}
+
+.hero{
+background:linear-gradient(135deg,#0d6efd,#001f5c);
+color:white;
+border-radius:0 0 30px 30px;
+}
+
+.btn{
+transition:.3s;
+box-shadow:0 8px 20px rgba(13,110,253,.3);
+}
+
+.btn:hover{
+transform:scale(1.05);
+background:#0056d6;
+}
+
+.card{
+transition:.4s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+section{
+animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* WhatsApp Button */
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+z-index:999;
+}
+
+.whatsapp:hover{
+background:#128C7E;
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:32px;
+}
+
+.hero h2{
+font-size:28px;
+}
+
+nav{
+flex-direction:column;
+}
+
+nav a{
+margin:8px 0;
+}
+
+.card{
+max-width:100%;
+}
+
+}
