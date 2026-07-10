@@ -27,4 +27,10 @@ topBtn.onclick = function () {
         behavior: "smooth"
     });
 };
-5
+window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader");
+
+    setTimeout(() => {
+        loader.classList.add("hide");
+    }, 1200);
+});
