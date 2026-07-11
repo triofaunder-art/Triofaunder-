@@ -12,14 +12,6 @@ if (form) {
 // Scroll To Top Button
 
 
-if (topBtn) {
-    topBtn.onclick = function () {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    };
-}
 
 // Loader
 window.addEventListener("load", function () {
