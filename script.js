@@ -72,3 +72,56 @@ const counterObserver = new IntersectionObserver((entries) => {
 });
 
 counters.forEach(counter => counterObserver.observe(counter));
+// Loader
+window.addEventListener("load", () => {
+    document.querySelector(".loader").classList.add("hide");
+});
+
+// Scroll To Top Button
+const topBtn = document.getElementById("topBtn");
+
+window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+};
+
+topBtn.onclick = function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+};
+
+// AI Assistant
+function askAI() {
+
+    let question = document.getElementById("userQuestion").value.toLowerCase();
+    let answer = "";
+
+    if (question.includes("web")) {
+        answer = "We provide professional Website Design & Development services.";
+    }
+    else if (question.includes("graphic")) {
+        answer = "We design Logos, Posters, Banners and Social Media Graphics.";
+    }
+    else if (question.includes("video")) {
+        answer = "We edit YouTube videos, Shorts, Reels and Ads.";
+    }
+    else if (question.includes("seo")) {
+        answer = "We provide complete SEO services to improve website ranking.";
+    }
+    else if (question.includes("app")) {
+        answer = "We develop Android apps and business applications.";
+    }
+    else if (question.includes("price") || question.includes("pricing")) {
+        answer = "Our plans start from ₹999. Contact us for a custom quote.";
+    }
+    else {
+        answer = "Please contact Trio Founder on WhatsApp or Email for more details.";
+    }
+
+    document.getElementById("aiAnswer").innerHTML = answer;
+}
