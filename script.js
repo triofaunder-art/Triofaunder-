@@ -68,12 +68,14 @@ window.onscroll = function () {
     }
 };
 
-topBtn.onclick = function () {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-};
+if (topBtn) {
+    topBtn.onclick = function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+}
 
 // AI Assistant
 
