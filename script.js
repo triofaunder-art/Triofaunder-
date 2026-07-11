@@ -10,17 +10,7 @@ if (form) {
 }
 
 // Scroll To Top Button
-const topBtn = document.getElementById("topBtn");
 
-window.onscroll = function () {
-    if (topBtn) {
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            topBtn.style.display = "block";
-        } else {
-            topBtn.style.display = "none";
-        }
-    }
-};
 
 if (topBtn) {
     topBtn.onclick = function () {
