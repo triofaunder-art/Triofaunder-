@@ -1,38 +1,43 @@
 console.log("Welcome to Trio Founder!");
+
 // Contact Form
 const form = document.querySelector(".contact-form");
-
-if (form) {
-    const form = document.querySelector(".contact-form");
 
 if (form) {
     form.addEventListener("submit", function() {
         alert("Thank you! Your request is being sent.");
     });
 }
-}
 
 // Scroll To Top Button
 const topBtn = document.getElementById("topBtn");
 
 window.onscroll = function () {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        topBtn.style.display = "block";
-    } else {
-        topBtn.style.display = "none";
+    if (topBtn) {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
     }
 };
 
-topBtn.onclick = function () {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-};
+if (topBtn) {
+    topBtn.onclick = function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+}
+
+// Loader
 window.addEventListener("load", function () {
     const loader = document.querySelector(".loader");
 
-    setTimeout(() => {
-        loader.classList.add("hide");
-    }, 1200);
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add("hide");
+        }, 1200);
+    }
 });
