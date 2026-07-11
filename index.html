@@ -154,17 +154,36 @@
   <p>Trio Founder helps businesses find skilled professionals quickly and helps freelancers connect with quality clients.</p>
 </section>
 
-<section id="contact" class="contact">
-    <h2>Contact Us</h2>
+<form action="https://formsubmit.co/triofaunder@gmail.com" method="POST" class="contact-form">
 
-    <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Client Request - Trio Founder">
+    <input type="hidden" name="_next" value="https://triofaunder-art.github.io/Triofaunder-/">
 
-        <input type="email" placeholder="Your Email" required>
+    <input type="text" name="name" placeholder="Full Name" required>
 
-        <textarea placeholder="Your Message" rows="6" required></textarea>
+    <input type="email" name="email" placeholder="Email Address" required>
 
-        <button type="submit" class="btn">Send Message</button>
+    <input type="tel" name="phone" placeholder="Mobile Number" required>
+
+    <select name="service" required>
+        <option value="">Select Service</option>
+        <option>Web Design</option>
+        <option>Graphic Design</option>
+        <option>Video Editing</option>
+        <option>App Development</option>
+        <option>Digital Marketing</option>
+        <option>SEO</option>
+        <option>Other</option>
+    </select>
+
+    <input type="text" name="budget" placeholder="Project Budget">
+
+    <textarea name="message" rows="6" placeholder="Describe your project..." required></textarea>
+
+    <button type="submit" class="btn">Send Request</button>
+
+</form>
     </form>
 
     <p><strong>Email:</strong> triofaunder@gmail.com</p>
