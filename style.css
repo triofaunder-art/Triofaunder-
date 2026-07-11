@@ -320,7 +320,7 @@ max-width:100%;
     margin:30px auto;
 }
 
-..contact-form input,
+.contact-form input,
 .contact-form textarea,
 .contact-form select{
     width:100%;
