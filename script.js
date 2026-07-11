@@ -96,35 +96,7 @@ topBtn.onclick = function () {
 };
 
 // AI Assistant
-function askAI() {
 
-    let question = document.getElementById("userQuestion").value.toLowerCase();
-    let answer = "";
-
-    if (question.includes("web")) {
-        answer = "We provide professional Website Design & Development services.";
-    }
-    else if (question.includes("graphic")) {
-        answer = "We design Logos, Posters, Banners and Social Media Graphics.";
-    }
-    else if (question.includes("video")) {
-        answer = "We edit YouTube videos, Shorts, Reels and Ads.";
-    }
-    else if (question.includes("seo")) {
-        answer = "We provide complete SEO services to improve website ranking.";
-    }
-    else if (question.includes("app")) {
-        answer = "We develop Android apps and business applications.";
-    }
-    else if (question.includes("price") || question.includes("pricing")) {
-        answer = "Our plans start from ₹999. Contact us for a custom quote.";
-    }
-    else {
-        answer = "Please contact Trio Founder on WhatsApp or Email for more details.";
-    }
-
-    document.getElementById("aiAnswer").innerHTML = answer;
-}
 function askAI() {
 
     const question = document.getElementById("userQuestion").value.toLowerCase().trim();
