@@ -41,3 +41,34 @@ window.addEventListener("load", function () {
         }, 1200);
     }
 });
+// Animated Counter
+
+const counters = document.querySelectorAll(".stat h2");
+
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = parseInt(counter.innerText);
+
+            let count = 0;
+            const speed = target / 100;
+
+            const update = () => {
+                count += speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count) + "+";
+                    requestAnimationFrame(update);
+                } else {
+                    counter.innerText = target + "+";
+                }
+            };
+
+            update();
+            counterObserver.unobserve(counter);
+        }
+    });
+});
+
+counters.forEach(counter => counterObserver.observe(counter));
