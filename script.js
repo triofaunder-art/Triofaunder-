@@ -125,3 +125,45 @@ function askAI() {
 
     document.getElementById("aiAnswer").innerHTML = answer;
 }
+function askAI() {
+
+    const question = document.getElementById("userQuestion").value.toLowerCase().trim();
+    const answerBox = document.getElementById("aiAnswer");
+
+    if(question === ""){
+        answerBox.innerHTML = "Please type your question first.";
+        return;
+    }
+
+    let answer = "";
+
+    if(question.includes("web")){
+        answer = "🌐 We create modern business websites, landing pages and portfolio websites.";
+    }
+    else if(question.includes("graphic") || question.includes("logo")){
+        answer = "🎨 We provide Logo Design, Banner Design, Posters, Social Media Posts and Branding.";
+    }
+    else if(question.includes("video")){
+        answer = "🎬 We edit YouTube videos, Instagram Reels, Shorts and Ads.";
+    }
+    else if(question.includes("seo")){
+        answer = "📈 We provide SEO services to improve your Google ranking.";
+    }
+    else if(question.includes("app")){
+        answer = "📱 We build Android Apps and Business Applications.";
+    }
+    else if(question.includes("price") || question.includes("pricing") || question.includes("cost")){
+        answer = "💰 Our plans start from ₹999. Contact us for a custom quotation.";
+    }
+    else if(question.includes("contact") || question.includes("phone")){
+        answer = "📞 Phone: +91 7065237526 <br>📧 Email: triofaunder@gmail.com";
+    }
+    else if(question.includes("whatsapp")){
+        answer = "💬 WhatsApp us at +91 7065237526";
+    }
+    else{
+        answer = "🤖 Sorry, I don't understand that yet. Please contact Trio Founder on WhatsApp or Email.";
+    }
+
+    answerBox.innerHTML = answer;
+}
