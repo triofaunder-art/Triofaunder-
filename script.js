@@ -55,9 +55,7 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 counters.forEach(counter => counterObserver.observe(counter));
 // Loader
-window.addEventListener("load", () => {
-    document.querySelector(".loader").classList.add("hide");
-});
+
 
 // Scroll To Top Button
 const topBtn = document.getElementById("topBtn");
