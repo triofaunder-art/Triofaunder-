@@ -3,11 +3,13 @@ console.log("Welcome to Trio Founder!");
 const form = document.querySelector(".contact-form");
 
 if (form) {
-    form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        alert("✅ Thank you! Your message has been sent.");
-        form.reset();
+    const form = document.querySelector(".contact-form");
+
+if (form) {
+    form.addEventListener("submit", function() {
+        alert("Thank you! Your request is being sent.");
     });
+}
 }
 
 // Scroll To Top Button
